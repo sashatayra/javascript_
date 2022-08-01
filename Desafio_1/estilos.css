@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 50%;
+    background-color: rgb(198, 136, 255);
+    color: #fff;
+}
