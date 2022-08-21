@@ -1,18 +1,3 @@
-// let lista = document.getElementById('lista')
-
-// console.log(lista)
-
-// const personas = ["Juan", "Pedro", "Marias", "Matias"]
-
-// //iterar con un for...of
-
-// for (const pers of personas) {
-//     //crear el nodo li para imprimir el array e imprimirlo en el ul padre
-//     let li = document.createElement('li')
-//     li.innerHTML = pers
-//     lista.appendChild(li)
-// }
-
 let catalogo = document.getElementById('catalogo')
 
 console.log(catalogo)
