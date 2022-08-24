@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#alertUno{
+    margin: .5rem;
+    padding: .5rem;
+    background-color: rgb(128, 196, 255);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}
+
+#btnUno{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    background-color: rgb(128, 196, 255);
+    color: #fff;
+    margin: auto;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1rem;
+    opacity: 70%;
+}
+
+#btnDos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    background-color: rgb(128, 196, 255);
+    color: #fff;
+    margin: auto;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    opacity: 70%;
+}
+
+
+#btnTres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-color: #fff;
+    background-color: rgb(128, 196, 255);
+    color:#fff;
+    margin: auto;
+    padding: 1.5rem;
+    opacity: 70%;
+}
+
+#btnUno:hover{
+    opacity: 100%;
+}
+
+#btnDos:hover{
+    opacity: 100%;
+}
+
+#btnTres:hover{
+    opacity: 100%;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 1rem;
+    list-style: none;
+}
+
+#alertDos{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#elija{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#seleccionar{
+    display: flex;
+    margin-top: 1rem;
+}
+
+#carrito{
+    margin-left: auto;
+    margin-right: .5rem;
+    padding: 2px;
+}
+
+#carrito2{
+    padding: 2px;
+    margin-right: auto;
+}
