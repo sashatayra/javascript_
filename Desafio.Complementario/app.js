@@ -138,6 +138,3 @@ let numArticulo = localStorage.getItem("numeroArticulo")
 console.log(typeof numArticulo)
 
 let listaProd2 = localStorage.getItem("listaProd").split(",")
-
-
-
