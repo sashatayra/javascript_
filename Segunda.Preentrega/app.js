@@ -52,6 +52,8 @@ console.log(formulario)
 
 let iCarrito = document.getElementById("carrito")
 
+let agregar = document.getElementById("carrito2")
+
 let mostrarProdSolos = document.getElementById('mostrarProdSolos')
 
 // Eventos
@@ -63,6 +65,46 @@ botonDos.onclick =() => camisetas.innerHTML = "<li>5. Camiseta Adidas, River Pla
 botonTres.addEventListener("click", mostrarPant)
 
 formulario.addEventListener('submit', agregarProd)
+//     e.preventDefault()
+//     validarDatos();
+//     let datos = e.target  
+//     if (bandera = true){
+//         Swal.fire({
+//             title: 'Esta seguro?',
+//             text: "Desea agregar el producto?",
+//             icon: 'info',
+//             showCancelButton: true,
+//             confirmButtonText: 'Si, agregar',
+//             cancelButtonText: 'Cancelar',
+//             reverseButtons: true
+//           }).then((result) => {
+//             if (result.isConfirmed) {
+//                 Swal.fire(
+//                 'Cancelado',
+//                 'No se agregara el producto',
+//                 'error'
+//               )
+//             } else if (result.isDenied) {
+//                 Swal.fire(
+//                 listaProd.push(iCarrito),
+//                 datos.children[0].value = "",
+//                 mostrarUnProd(listaProd),
+//                 'Listo!',
+//                 'Producto agregado',
+//                 'succes'
+//               )
+//             }
+//         else {
+//             iCarrito.focus()
+//         }
+
+//         localStorage.setItem("numeroArticulo", iCarrito),
+//         localStorage.setItem("listaProd", listaProd)
+//         })
+//     }
+    
+// })
+
 
 // Funciones
 
@@ -90,16 +132,34 @@ const mostrarUnProd = (listaProd) =>{
 function agregarProd(e){
     e.preventDefault()
     validarDatos();
-    if(bandera == true){
-        let opcion = confirm("Desea agregar este producto?")
-        if(opcion == true){
-            let datos = e.target
-            listaProd.push(iCarrito)
-            datos.children[0].value = "";
-            mostrarUnProd(listaProd)
-        } else {
-            alert("No se agregara el producto")
-        }
+    let datos = e.target
+    if(bandera == true){   
+        Swal.mixin({
+            title: 'Esta seguro?',
+            text: "Desea agregar el producto?",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonText: 'Si, agregar',
+            cancelButtonText: 'Cancelar',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.mixin(
+                'Cancelado',
+                'No se agregara el producto',
+                'error'
+                )
+            } else if (result.isDenied) {
+                Swal.mixin(
+                listaProd.push(iCarrito),
+                datos.children[0].value = "",
+                mostrarUnProd(listaProd),
+                'Listo!',
+                'Producto agregado',
+                'succes'
+              )
+            }
+          })
 
         } else {
             iCarrito.focus()
@@ -109,6 +169,17 @@ function agregarProd(e){
         localStorage.setItem("listaProd", listaProd)
 
 }
+
+// const Swal = Swal.mixin({
+//     customClass: {
+//       confirmButton: 'btn btn-success',
+//       cancelButton: 'btn btn-danger'
+//     },
+//     buttonsStyling: false
+//   })
+
+
+// agregarProd()
 
 function mostrarPant (e){
     e.preventDefault();
